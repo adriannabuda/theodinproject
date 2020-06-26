@@ -1,7 +1,6 @@
 def caesar_cipher (string, number)
     caesar_string = ""
     lower_case = ("a"..."z").to_a
-    number = gets.chomp.to_i
 
     string.each_char do |i|
       if lower_case.include? (i.downcase) 
@@ -15,7 +14,7 @@ def caesar_cipher (string, number)
 
   print "What would you like to encrypt?"
   text = gets.chomp
-  print "Shift number"
-  number = gets.chomp
+  print "With shift of:"
+  number = gets.chomp.to_i
 
   puts caesar_cipher(text,number)
