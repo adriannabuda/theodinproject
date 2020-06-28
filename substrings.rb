@@ -1,26 +1,19 @@
- 
+dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
 
-  def substring(word, dicionary)
+def substring(string, dictionary)
 
-  dictionary = ["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]
-
-  result = (Hash.new(0)) 
-  dictionary.to_s
+  result = Hash.new 0
+  new_array = string.downcase.split(" ")
   
-  dictionary.each do |i|
-    if word.include? i
-      result[i] =+1
+  new_array.each do |word|
+    dictionary.each do |value|
+    if word.include? value
+      result[value] =+1
     end
-
   end
+end
+p result
 
-puts result
+end
 
-
-  end
- 
 substring("Howdy partner, sit down! How's it going?", dictionary)
-
-
-
- 
