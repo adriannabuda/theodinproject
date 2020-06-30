@@ -19,6 +19,6 @@ array
 end
 
 puts "Type your array:"
-array = gets.chomp.split(",")
+array = gets.chomp.split(",").map { |e| e.to_i }
 
 p bubble_sort(array)
